@@ -1,0 +1,23 @@
+package com.sprint5T1N2.rot;
+
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
+
+@RestController
+public class HelloControler {
+
+
+    @GetMapping("/hello")
+    public Mono<String> hello(){
+        return Mono.just("Hello World!");
+    }
+
+
+
+    @GetMapping("/bye")
+    public Mono<String> bye(){
+        return Mono.just("Bye bye cruel world...");
+    }
+}
