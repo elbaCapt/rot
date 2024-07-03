@@ -13,4 +13,11 @@ public class HelloController {
     public Mono<String> hello() {
         return Mono.just("Hello, World!");    //prints Hello, World!
     }
+
+
+    @GetMapping("/bye")
+    public Mono<String> bye() {
+        return Mono.just("Bye, bye cruel word...");    //prints Hello, World!
+    }
+
 }
